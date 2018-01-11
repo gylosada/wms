@@ -1,0 +1,18 @@
+
+html{
+	height: 100%;
+	background-image: url(images/der.jpg);
+	background-origin: content-box;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+body{
+	background-image: url(images/izq.jpg);
+	background-origin: content-box;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100%;
+}

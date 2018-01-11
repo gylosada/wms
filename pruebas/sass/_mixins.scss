@@ -1,0 +1,58 @@
+
+/*--- p variedades -----------------*/
+@mixin textclass($size, $weight, $linea, $color){
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $linea;
+	color: $color;
+}
+
+
+
+@mixin botones($color, $back){
+	font-weight: 500;
+	height: 40px;
+	font-size: 17px;
+	border-radius: 10px;
+	color: $color;
+	background: $back;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+// @include boton(85px, capitalize);
+
+
+@mixin gradientebyn($valor1, $uno, $valor2){
+	background: rgba($valor1,$valor1,$valor1,$uno);
+	background: -webkit-linear-gradient(top, rgba($valor1,$valor1,$valor1,$uno), rgba($valor2,$valor2,$valor2,$uno));
+	background: -o-linear-gradient(top, rgba($valor1,$valor1,$valor1,$uno), rgba($valor2,$valor2,$valor2,$uno));
+    background: -moz-linear-gradient(top, rgba($valor1,$valor1,$valor1,$uno), rgba($valor2,$valor2,$valor2,$uno));
+    background: linear-gradient(top, rgba($valor1,$valor1,$valor1,$uno), rgba($valor2,$valor2,$valor2,$uno));
+}
+
+
+
+
+
+/*-
+
+all 
+::-webkit-input-placeholder { color:#f00; }
+::-moz-placeholder { color:#f00; } /firefox 19+ 
+:-ms-input-placeholder { color:#f00; }  ie 
+input:-moz-placeholder { color:#f00; }
+
+individual: webkit
+#field2::-webkit-input-placeholder { color:#00f; }
+#field3::-webkit-input-placeholder { color:#090; background:lightgreen; text-transform:uppercase; }
+#field4::-webkit-input-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#999; }
+
+individual: mozilla
+#field2::-moz-placeholder { color:#00f; }
+#field3::-moz-placeholder { color:#090; background:lightgreen; text-transform:uppercase; }
+#field4::-moz-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#999; }
+
+
+
+-*/

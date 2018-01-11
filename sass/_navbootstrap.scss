@@ -1,0 +1,55 @@
+#navresponsive{
+	display: none;
+	//display: flex;
+    margin: auto;
+    text-align: left;
+    width: 100%;
+    padding: 0 30px;
+	div{
+		width: 29%;
+	}
+	div:first-child{
+		margin-top: 21px;
+		width: 70%;
+	}
+	.dropdown{
+		text-align: right;
+			margin-top: 14px;
+		button{
+			font-size: 35px;
+		}				
+		div{
+			position: relative;
+			transform: none;
+		}
+		.btn{
+			padding: 0;
+		}
+		.btn-secondary{
+			background: none;
+			border: none;
+		}
+		.dropdown-toggle::after{
+			display: none;
+		}
+		.btn-secondary.focus, .btn-secondary:focus {
+		    box-shadow: none;
+		}
+		.dropdown-menu.show{
+		    width: auto;
+			margin: 0;
+		    font-size: inherit;
+		    border: none;
+		    border-radius: 5px;
+		    .dropdown-item{
+		    	color: $gris1;
+		    	font-weight: inherit;
+		    	text-align: right;
+		    }
+		    .dropdown-item:hover, .dropdown-item:active, .dropdown-item:focus {
+		    	background: none;
+		    	color: $bordo;
+		    }
+		}
+	}
+}

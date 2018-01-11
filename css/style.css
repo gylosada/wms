@@ -1,0 +1,588 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: top; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*--- p variedades -----------------*/
+/*-
+
+all 
+::-webkit-input-placeholder { color:#f00; }
+::-moz-placeholder { color:#f00; } /firefox 19+ 
+:-ms-input-placeholder { color:#f00; }  ie 
+input:-moz-placeholder { color:#f00; }
+
+individual: webkit
+#field2::-webkit-input-placeholder { color:#00f; }
+#field3::-webkit-input-placeholder { color:#090; background:lightgreen; text-transform:uppercase; }
+#field4::-webkit-input-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#999; }
+
+individual: mozilla
+#field2::-moz-placeholder { color:#00f; }
+#field3::-moz-placeholder { color:#090; background:lightgreen; text-transform:uppercase; }
+#field4::-moz-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#999; }
+
+
+
+-*/
+#navresponsive {
+  display: none;
+  margin: auto;
+  text-align: left;
+  width: 100%;
+  padding: 0 30px; }
+  #navresponsive div {
+    width: 29%; }
+  #navresponsive div:first-child {
+    margin-top: 21px;
+    width: 70%; }
+  #navresponsive .dropdown {
+    text-align: right;
+    margin-top: 14px; }
+    #navresponsive .dropdown button {
+      font-size: 35px; }
+    #navresponsive .dropdown div {
+      position: relative;
+      transform: none; }
+    #navresponsive .dropdown .btn {
+      padding: 0; }
+    #navresponsive .dropdown .btn-secondary {
+      background: none;
+      border: none; }
+    #navresponsive .dropdown .dropdown-toggle::after {
+      display: none; }
+    #navresponsive .dropdown .btn-secondary.focus, #navresponsive .dropdown .btn-secondary:focus {
+      box-shadow: none; }
+    #navresponsive .dropdown .dropdown-menu.show {
+      width: auto;
+      margin: 0;
+      font-size: inherit;
+      border: none;
+      border-radius: 5px; }
+      #navresponsive .dropdown .dropdown-menu.show .dropdown-item {
+        color: #7C7C7C;
+        font-weight: inherit;
+        text-align: right; }
+      #navresponsive .dropdown .dropdown-menu.show .dropdown-item:hover, #navresponsive .dropdown .dropdown-menu.show .dropdown-item:active, #navresponsive .dropdown .dropdown-menu.show .dropdown-item:focus {
+        background: none;
+        color: #BB1413; }
+
+html {
+  height: 100%; }
+
+body {
+  font-family: "Ubuntu", Arial, sans-serif;
+  height: 100%;
+  margin: auto;
+  background-image: url(../images/der.jpg);
+  background-origin: content-box;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*-img{
+  	width: 100%;
+  	height: auto;
+  }-*/ }
+  body a, body a:hover {
+    text-decoration: none; }
+  body p {
+    color: #7C7C7C;
+    font-family: "Ubuntu", Arial, sans-serif; }
+  body h1, body h2, body h3 {
+    font-weight: 500; }
+  body h2 {
+    font-size: 50px; }
+  body h4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #BB1413; }
+
+/*--header  ---------------------------------*/
+header {
+  position: relative;
+  background-image: url(../images/izq.jpg);
+  background-origin: content-box;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  text-align: center;
+  /*--header breakpoints ---------------------------------------------------*/
+  /*- NAV RESPONSIVE DISPLAY ----*/
+  /*- Sidebar y button up desaparecen ----*/ }
+  header #navegador {
+    background: #BB1413;
+    height: 80px; }
+    header #navegador #navdesktop {
+      margin: auto;
+      width: 70%;
+      display: flex;
+      justify-content: space-between; }
+      header #navegador #navdesktop ul {
+        display: flex;
+        justify-content: space-between; }
+        header #navegador #navdesktop ul li {
+          text-align: center;
+          display: inline-block;
+          margin-top: 30px;
+          padding: 0 15px;
+          box-sizing: border-box; }
+          header #navegador #navdesktop ul li a {
+            color: white;
+            padding-bottom: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px; }
+          header #navegador #navdesktop ul li a:hover {
+            border-bottom: 1px solid white; }
+        header #navegador #navdesktop ul #li1 {
+          padding: 0 15px 0 0; }
+        header #navegador #navdesktop ul #li2 {
+          padding: 0 0 0 15px; }
+      header #navegador #navdesktop div {
+        margin-top: 20px;
+        display: inline-block; }
+  header #banner {
+    width: 45%;
+    margin: auto;
+    margin-top: 90px; }
+    header #banner #sglh1 {
+      margin-bottom: 50px; }
+      header #banner #sglh1 h1 {
+        font-size: 40px;
+        color: #BB1413;
+        padding: 10px 15px;
+        display: inline-block;
+        border: solid 2px #BB1413;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px; }
+    header #banner p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      color: #7C7C7C; }
+    header #banner div {
+      margin-bottom: 60px; }
+      header #banner div h3 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 42px;
+        color: #BB1413;
+        margin-bottom: 10px; }
+    header #banner #abanner {
+      font-weight: 500;
+      height: 40px;
+      font-size: 17px;
+      border-radius: 10px;
+      color: white;
+      background: #BB1413;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      margin-bottom: 20px; }
+    header #banner #sidebar {
+      position: fixed;
+      right: 40px;
+      top: 100px;
+      width: 150px; }
+      header #banner #sidebar a {
+        display: inline-block;
+        width: 100%;
+        background: #AEAEAE;
+        color: white;
+        padding: 10px 8px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        text-decoration: none;
+        font-size: 14px; }
+        header #banner #sidebar a:hover {
+          font-weight: 700; }
+        header #banner #sidebar a i {
+          color: white;
+          font-size: 16px;
+          padding-right: 5px; }
+    header #banner #upbutton {
+      background: #BB1413;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      z-index: 10;
+      position: fixed;
+      margin-bottom: 0px;
+      right: 40px;
+      bottom: 40px; }
+      header #banner #upbutton a {
+        display: inline-block;
+        padding: 15px;
+        box-sizing: border-box; }
+        header #banner #upbutton a span {
+          color: white; }
+  @media (max-width: 1060px) {
+    header #navegador #navdesktop {
+      width: 80%; }
+    header #banner {
+      width: 60%;
+      margin-top: 50px; }
+      header #banner #sglh1 {
+        margin-bottom: 30px; }
+      header #banner div {
+        margin-bottom: 45px; } }
+  @media (max-width: 950px) {
+    header #navegador #navdesktop {
+      width: 90%; } }
+  @media (max-width: 800px) {
+    header #navegador #navdesktop {
+      display: none; }
+    header #navegador #navresponsive {
+      display: flex; } }
+  @media (max-width: 670px) {
+    header #sidebar, header #upbutton {
+      display: none; } }
+
+/*--sistema  ---------------------------------*/
+#sist {
+  background: url(../images/fondo1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1; }
+  #sist #gradiente {
+    margin-bottom: 130px; }
+    #sist #gradiente div {
+      padding-top: 35px;
+      margin: auto;
+      width: 70%;
+      text-align: center; }
+      #sist #gradiente div h2 {
+        color: white;
+        margin-bottom: 55px; }
+      #sist #gradiente div article {
+        display: inline-block;
+        width: 49%; }
+        #sist #gradiente div article h4 {
+          padding: 10px 0; }
+        #sist #gradiente div article p {
+          width: 90%;
+          margin: auto;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 22px;
+          color: #7C7C7C; }
+
+/*--caracter├¡sticas  ---------------------------------*/
+#caract {
+  width: 70%;
+  margin: auto;
+  text-align: center; }
+  #caract h2 {
+    width: 100%;
+    color: #BB1413;
+    margin-bottom: 60px; }
+  #caract #divarticle {
+    display: flex;
+    justify-content: space-between;
+    text-align: initial; }
+    #caract #divarticle article {
+      display: inline-block;
+      width: 30%; }
+      #caract #divarticle article .divimg {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px; }
+        #caract #divarticle article .divimg img {
+          width: 100%;
+          height: auto; }
+      #caract #divarticle article h4 {
+        color: black; }
+      #caract #divarticle article p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 22px;
+        color: #7C7C7C; }
+      #caract #divarticle article ul li {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 22px;
+        color: #7C7C7C; }
+  #caract a {
+    display: inline-block;
+    font-weight: 500;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 10px;
+    color: white;
+    background: #BB1413;
+    padding: 10px 20px;
+    box-sizing: border-box; }
+
+/*--capt  ---------------------------------*/
+#capt {
+  background: url(../images/fondocapturas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -115px;
+  padding-bottom: 145px; }
+  #capt #divflex {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 265px; }
+    #capt #divflex div {
+      width: 38%;
+      text-align: center; }
+      #capt #divflex div img {
+        max-width: 90%;
+        height: auto; }
+    #capt #divflex div:nth-child(odd) img {
+      padding-top: 85px; }
+
+/*--words  ---------------------------------*/
+#words {
+  margin-bottom: 230px; }
+  #words div {
+    width: 70%;
+    margin: auto; }
+    #words div img {
+      width: 100%;
+      height: auto; }
+
+/*--func ---------------------------------*/
+#func #contenedor {
+  width: 70%;
+  margin: auto; }
+  #func #contenedor h2 {
+    color: #BB1413;
+    text-align: center;
+    margin-bottom: 60px; }
+  #func #contenedor h4 {
+    text-align: center;
+    margin-bottom: 25px; }
+  #func #contenedor #modbase {
+    margin-bottom: 70px; }
+    #func #contenedor #modbase div {
+      border: 2px solid #BB1413;
+      border-radius: 10px;
+      padding: 50px; }
+      #func #contenedor #modbase div ul {
+        display: inline-block;
+        width: 49%; }
+        #func #contenedor #modbase div ul li {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 28px;
+          color: #7C7C7C; }
+          #func #contenedor #modbase div ul li span {
+            color: #BB1413;
+            padding-right: 10px; }
+  #func #contenedor #modcompl #divflex2 {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap; }
+    #func #contenedor #modcompl #divflex2 article {
+      width: 48%;
+      display: inline-block;
+      margin-bottom: 50px; }
+      #func #contenedor #modcompl #divflex2 article div {
+        display: inline-block;
+        width: 23%;
+        height: auto; }
+        #func #contenedor #modcompl #divflex2 article div img {
+          max-width: 100%;
+          height: auto; }
+      #func #contenedor #modcompl #divflex2 article div:last-child {
+        width: 73%;
+        padding-left: 1%; }
+        #func #contenedor #modcompl #divflex2 article div:last-child span {
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 15px;
+          color: black; }
+        #func #contenedor #modcompl #divflex2 article div:last-child p {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          color: #7C7C7C; }
+  #func #contenedor #video {
+    text-align: center; }
+
+/*--form ---------------------------------*/
+#form {
+  background: #DFDFDF; }
+  #form #formcontenedor {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 75px; }
+    #form #formcontenedor h2 {
+      color: #324165;
+      margin-bottom: 50px; }
+    #form #formcontenedor div {
+      width: 500px;
+      margin: auto; }
+      #form #formcontenedor div input, #form #formcontenedor div textarea {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: none;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15px;
+        color: #7C7C7C;
+        font-family: "Ubuntu", Arial, sans-serif; }
+      #form #formcontenedor div textarea {
+        margin-bottom: 50px; }
+      #form #formcontenedor div input[type=submit] {
+        display: inline-block;
+        width: auto;
+        font-weight: 500;
+        height: 40px;
+        font-size: 17px;
+        border-radius: 10px;
+        color: white;
+        background: #324165;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        margin-bottom: 90px; }
+
+/*--nosotros  ---------------------------------*/
+#nos {
+  background: url(../images/nos1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 360px; }
+  #nos div {
+    text-align: center;
+    padding-top: 7%;
+    width: 45%;
+    margin: auto; }
+    #nos div h2 {
+      color: white;
+      margin-bottom: 40px;
+      line-height: 55px; }
+    #nos div a {
+      font-weight: 500;
+      height: 40px;
+      font-size: 17px;
+      border-radius: 10px;
+      color: #324165;
+      background: white;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      margin-bottom: 20px; }
+
+/*-footer  --------------------------------------------*/
+footer {
+  height: 125px; }
+  footer #foot1 {
+    height: 80px;
+    background: #324165; }
+    footer #foot1 nav {
+      width: 70%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between; }
+      footer #foot1 nav div {
+        padding-top: 25px;
+        display: inline-block;
+        width: 23%; }
+      footer #foot1 nav ul {
+        display: inline-block; }
+        footer #foot1 nav ul li {
+          display: inline-block;
+          color: #58BFCE;
+          font-size: 20px; }
+          footer #foot1 nav ul li a {
+            display: inline-block;
+            padding: 3px 0 0 5px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 12px;
+            color: white; }
+          footer #foot1 nav ul li a:hover {
+            color: #58BFCE; }
+      footer #foot1 nav #datos {
+        padding-top: 20px;
+        text-align: center;
+        width: 59%; }
+      footer #foot1 nav #redes {
+        padding-top: 27px;
+        width: 17%;
+        display: flex;
+        justify-content: flex-end; }
+        footer #foot1 nav #redes a {
+          font-size: 23px;
+          padding: 0 10px;
+          box-sizing: border-box; }
+        footer #foot1 nav #redes a:hover {
+          color: #58BFCE; }
+  footer #foot2 {
+    width: 70%;
+    height: 45px;
+    margin: auto;
+    text-align: center; }
+    footer #foot2 p {
+      margin-top: 15px;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 12px;
+      color: #7C7C7C; }
+      footer #foot2 p a {
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 12px;
+        color: #324165; }
+
+/*# sourceMappingURL=style.css.map */

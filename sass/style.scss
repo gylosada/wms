@@ -1,0 +1,565 @@
+@import "_reset";
+@import "_variables";
+@import "_mixins";
+@import "_navbootstrap";
+
+html{
+	height: 100%;
+}
+
+body{
+	font-family: $font;
+	height: 100%;
+	margin: auto;
+	background-image: url(../images/der.jpg);
+	background-origin: content-box;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: contain;
+	/*-img{
+		width: 100%;
+		height: auto;
+	}-*/
+	a, a:hover{
+		text-decoration: none;
+	}
+	p{
+		color: $gris1;
+		font-family: $font;
+	}
+	h1, h2, h3{
+		font-weight: 500;
+	}
+	h2{
+		font-size: 50px;
+	}
+	h4{
+		@include textclass(20px, 700, 26px, $bordo);	
+	}
+}
+
+
+
+
+
+/*--header  ---------------------------------*/
+header{
+	position: relative;
+	background-image: url(../images/izq.jpg);
+	background-origin: content-box;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100%;
+	//height: 670px; para sacar el alto 100%
+	text-align: center;
+	#navegador{
+		background: $bordo;
+		height: 80px;
+		#navdesktop{
+			margin: auto;
+			width: $max;
+			display: flex;
+			justify-content: space-between;
+			ul{
+				display: flex;
+				justify-content: space-between;
+				li{
+					text-align: center;
+					display: inline-block;
+					margin-top: 30px;
+					padding: 0 15px;
+					box-sizing: border-box;
+					a{
+						color: $white;
+   						padding-bottom: 4px;
+						box-sizing: border-box;
+						font-size: 14px;
+						font-weight: 500;
+						letter-spacing: 0.5px;
+
+					}
+					a:hover{
+						border-bottom: 1px solid $white;
+					}
+				}
+				#li1{
+					padding: 0 15px 0 0;
+				}
+				#li2{
+					padding: 0 0 0 15px;
+				}
+			}
+			div{
+				margin-top: 20px;
+				display: inline-block;
+			}
+		}
+	}
+	#banner{
+		width: 45%;
+		margin: auto;
+		margin-top: 90px;
+		#sglh1{
+			margin-bottom: 50px;
+			h1{
+				font-size: 40px;
+				color: $bordo;
+    			padding: 10px 15px;
+				display: inline-block;
+				border: solid 2px $bordo;
+				border-radius: 10px;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+			}
+		}
+		p{
+			@include textclass(18px, 400, 25px, $gris1);
+		}
+		div{
+			margin-bottom: 60px;
+			h3{
+				@include textclass(36px, 500, 42px, $bordo);
+				margin-bottom: 10px;
+			}
+		}
+		#abanner{
+			@include botones($white, $bordo);
+			margin-bottom: 20px;
+		}
+		#sidebar{
+			position: fixed;
+			right: 40px;
+			top: 100px;
+			width: 150px;
+			a{
+				display: inline-block;
+				width: 100%;
+				background: $gris2;
+				color: $white;
+				padding: 10px 8px;
+				box-sizing: border-box;
+				border-radius: 10px;
+				margin-bottom: 15px;
+				text-decoration: none;
+				font-size: 14px;
+				&:hover{
+					font-weight: 700;
+				}
+				i{
+					color: $white;
+					font-size: 16px;
+					padding-right: 5px;
+				}
+			}
+		}
+		#upbutton{
+			background: $bordo;
+			border-radius: 50%;
+			height: 50px;
+			width: 50px;
+			z-index: 10;
+			position: fixed;
+			margin-bottom: 0px;
+			right: 40px;
+			bottom: 40px;
+			a{
+				display: inline-block;
+				padding: 15px;
+				box-sizing: border-box;
+				span{
+					
+					color: $white;
+				}
+			}
+		}
+	}
+	/*--header breakpoints ---------------------------------------------------*/
+	@media (max-width: 1060px){
+		#navegador{
+			#navdesktop{
+				width: 80%;
+			}
+		}
+		#banner{
+			width: 60%;
+			margin-top: 50px;
+			#sglh1{
+				margin-bottom: 30px;
+			}
+			div{
+				margin-bottom: 45px;
+			}
+		}
+	}
+
+	@media (max-width: 950px){
+		#navegador{
+			#navdesktop{
+				width: 90%;
+			}
+		}
+	}
+
+	/*- NAV RESPONSIVE DISPLAY ----*/
+	@media (max-width: 800px){ 
+		#navegador{
+			#navdesktop{
+				display: none;
+			}
+			#navresponsive{
+				display: flex;
+			}
+		}
+	}
+	/*- Sidebar y button up desaparecen ----*/
+	@media (max-width: 670px){
+		#sidebar, #upbutton{
+			display: none;
+		}
+	}
+}
+
+
+
+
+
+/*--sistema  ---------------------------------*/
+#sist{
+	background: url(../images/fondo1.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 1;
+	#gradiente{
+		//@include gradientebyn(255,1,198);
+		margin-bottom: 130px;
+		div{
+			padding-top: 35px;
+			margin: auto;
+			width: $max;
+			text-align: center;
+			h2{
+				color: $white;
+				margin-bottom: 55px;
+			}
+			article{
+				display: inline-block;
+				width: 49%;
+				h4{
+					padding: 10px 0;
+				}
+				p{
+					width: 90%;	
+					margin: auto;
+					@include textclass(15px, 300, 22px, $gris1);
+				}
+			}
+		}
+	}
+}
+
+
+
+/*--características  ---------------------------------*/
+#caract{
+	width: $max;
+	margin: auto;
+	text-align: center;
+	h2{
+		width: 100%;
+		color: $bordo;
+		margin-bottom: 60px;
+	}
+	#divarticle{
+		display: flex;
+		justify-content: space-between;
+		text-align: initial;
+		article{
+			display: inline-block;
+			width: 30%;
+			.divimg{
+				width: 100%;
+				height: auto;
+				margin-bottom: 15px;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			h4{
+				color: black;
+			}
+			p{
+				@include textclass(15px, 300, 22px, $gris1);			
+			}
+			ul{
+				li{
+					@include textclass(15px, 300, 22px, $gris1);
+				}
+			}
+		}
+	}
+	a{
+		display: inline-block;
+		@include botones($white, $bordo);
+	}
+}
+
+
+/*--capt  ---------------------------------*/
+#capt{
+	background: url(../images/fondocapturas.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: -115px;
+	padding-bottom: 145px;
+	#divflex{
+		width: $max;
+		margin: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding-top: 265px;
+		div{
+			width: 38%;
+			text-align: center;
+			img{
+				max-width: 90%;
+				height: auto;
+			}
+		}
+		div:nth-child(odd){
+			img{
+				padding-top: 85px;
+			}
+		}
+	}
+}
+
+
+
+/*--words  ---------------------------------*/
+#words{
+	margin-bottom: 230px;
+	div{
+		width: $max;
+		margin: auto;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
+
+/*--func ---------------------------------*/
+#func{
+	#contenedor{
+		width: $max;
+		margin: auto;
+		h2{
+			color: $bordo;
+			text-align: center;
+			margin-bottom: 60px;
+		}
+		h4{
+			text-align: center;
+			margin-bottom: 25px;
+		}
+		#modbase{
+			margin-bottom: 70px;
+			div{
+				border: 2px solid $bordo;
+				border-radius: 10px;
+				padding: 50px;
+				ul{
+					display: inline-block;
+					width: 49%;
+					li{
+						@include textclass(14px, 400, 28px, $gris1);
+						span{
+							color: $bordo;
+							padding-right: 10px;
+						}
+					}
+				}
+			}
+		}
+		#modcompl{
+			#divflex2{
+				display: flex;
+				justify-content: space-between;
+				margin: auto;
+				flex-wrap: wrap;
+				article{
+					width: 48%;
+					display: inline-block;
+					margin-bottom: 50px;
+					div{
+						display: inline-block;
+						width: 23%;
+						height: auto;
+						img{
+							max-width: 100%;
+							height: auto;
+						}
+					}
+					div:last-child{
+						width: 73%;
+						padding-left: 1%;
+						span{
+							@include textclass(15px, 400, 15px, black);
+						}
+						p{
+							@include textclass(12px, 400, 18px, $gris1);
+						}
+					}
+				}
+			}
+		}
+		#video{
+		    text-align: center;
+		}
+	}
+}
+
+
+
+
+/*--form ---------------------------------*/
+#form{
+	background: $gris3;
+	#formcontenedor{
+		width: $max;
+		margin: auto;
+		text-align: center;
+		padding-top: 75px;
+		h2{
+			color: $azul;
+			margin-bottom: 50px;
+		}
+		div{
+			width: 500px;
+			margin: auto;
+			input, textarea{
+				display: inline-block;
+				width: 100%;
+				margin-bottom: 15px;
+				padding: 15px;
+				box-sizing: border-box;
+				border-radius: 10px;
+				border: none;
+				@include textclass(13px, 400, 15px, $gris1);
+				font-family: $font;
+			}
+			textarea{
+				margin-bottom: 50px;
+			}
+			input[type=submit]{
+				display: inline-block;
+				width: auto;
+				@include botones($white, $azul);
+				margin-bottom: 90px;
+			}
+			//::-webkit-input-placeholder { font-family: $font; }
+		}
+	}
+}
+
+
+
+
+/*--nosotros  ---------------------------------*/
+#nos{
+	background: url(../images/nos1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;	
+	height: 360px;
+	div{
+		text-align: center;
+		padding-top: 7%;
+		width: 45%;
+		margin: auto;
+		h2{
+			color: $white;
+			margin-bottom: 40px;
+			line-height: 55px;
+		}
+		a{
+			@include botones($azul, $white);
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+
+/*-footer  --------------------------------------------*/
+footer{
+	height: 125px;
+	#foot1{
+		height: 80px;
+		background: $azul;
+		nav{
+			width: $max;
+			margin: auto;
+			display: flex;
+			justify-content: space-between;
+			div{
+				padding-top: 25px;
+				display: inline-block;
+				width: 23%;
+			}
+			ul{
+				display: inline-block;
+				li{
+					display: inline-block;
+					color: $turq;
+					font-size: 20px;
+					a{
+						display: inline-block;
+						padding: 3px 0 0 5px;
+						@include textclass(13px, 400, 12px, $white);
+					}
+					a:hover{
+						color: $turq;
+					}
+				}
+			}
+			#datos{
+				padding-top: 20px;
+				text-align: center;
+				width: 59%;
+			}
+			#redes{
+				padding-top: 27px;
+				width: 17%;
+				display: flex;
+				justify-content: flex-end;
+				a{
+					font-size: 23px;
+				    padding: 0 10px;
+				    box-sizing: border-box;
+				}
+				a:hover{
+					color: $turq;
+				}
+			}
+		}
+	}
+	#foot2{
+		width: $max;
+		height: 45px;
+		margin: auto;
+		text-align: center;
+		p{
+			margin-top: 15px;
+			@include textclass(11px, 400, 12px, $gris1);
+			a{
+				@include textclass(11px, 700, 12px, $azul);
+			}
+		}
+	}
+}
