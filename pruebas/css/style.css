@@ -173,7 +173,7 @@ header {
           box-sizing: border-box; }
           header #navegador #navdesktop ul li a {
             color: white;
-            padding-bottom: 10px;
+            padding-bottom: 4px;
             box-sizing: border-box;
             font-size: 14px;
             font-weight: 500;
@@ -284,6 +284,62 @@ header {
   @media (max-width: 670px) {
     header #sidebar, header #upbutton {
       display: none; } }
+
+/*--sistema  ---------------------------------*/
+#sist {
+  background: url(../images/fondo1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1; }
+  #sist #gradiente {
+    margin-bottom: 130px; }
+    #sist #gradiente div {
+      padding-top: 35px;
+      margin: auto;
+      width: 70%;
+      text-align: center; }
+      #sist #gradiente div h2 {
+        color: white;
+        margin-bottom: 55px; }
+      #sist #gradiente div article {
+        display: inline-block;
+        width: 49%; }
+        #sist #gradiente div article h4 {
+          padding: 10px 0; }
+        #sist #gradiente div article p {
+          width: 90%;
+          margin: auto;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 22px;
+          color: #7C7C7C; }
+
+/*--nosotros  ---------------------------------*/
+#nos {
+  background: url(../images/nos1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 360px; }
+  #nos div {
+    text-align: center;
+    padding-top: 7%;
+    width: 45%;
+    margin: auto; }
+    #nos div h2 {
+      color: white;
+      margin-bottom: 40px;
+      line-height: 55px; }
+    #nos div a {
+      font-weight: 500;
+      height: 40px;
+      font-size: 17px;
+      border-radius: 10px;
+      color: #324165;
+      background: white;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      margin-bottom: 20px; }
 
 /*-footer  --------------------------------------------*/
 footer {

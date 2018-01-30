@@ -72,7 +72,7 @@ header{
 					box-sizing: border-box;
 					a{
 						color: $white;
-						padding-bottom: 10px;
+   						padding-bottom: 4px;
 						box-sizing: border-box;
 						font-size: 14px;
 						font-weight: 500;
@@ -220,6 +220,303 @@ header{
 	}
 }
 
+
+
+/*--sistema  ---------------------------------*/
+#sist{
+	background: url(../images/fondo1.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 1;
+	#gradiente{
+		//@include gradientebyn(255,1,198);
+		margin-bottom: 130px;
+		div{
+			padding-top: 35px;
+			margin: auto;
+			width: $max;
+			text-align: center;
+			h2{
+				color: $white;
+				margin-bottom: 55px;
+			}
+			article{
+				display: inline-block;
+				width: 49%;
+				h4{
+					padding: 10px 0;
+				}
+				p{
+					width: 90%;	
+					margin: auto;
+					@include textclass(15px, 300, 22px, $gris1);
+				}
+			}
+		}
+	}
+}
+
+
+
+/*--características  ---------------------------------*/
+#caract{
+	text-align: center;
+	background: url(../images/fondocaract.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+    background-size: contain;
+    padding-bottom: 100px;
+	h2{
+		width: 100%;
+		color: $bordo;
+		margin-bottom: 60px;
+		padding-top: 35px;
+	}
+	#divarticle{
+		width: $max;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		text-align: initial;
+		article{
+			display: inline-block;
+			width: 30%;
+			.divimg{
+				width: 100%;
+				height: auto;
+				margin-bottom: 15px;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			h4{
+				color: black;
+			}
+			p{
+				@include textclass(15px, 300, 22px, $gris1);			
+			}
+			ul{
+				li{
+					@include textclass(15px, 300, 22px, $gris1);
+				}
+			}
+		}
+	}
+	a{
+		display: inline-block;
+		@include botones($white, $bordo);
+	}
+}
+
+
+
+/*--capt  ---------------------------------*/
+#capt{
+	background-color: $gris3;
+	margin-top: -1px;
+	margin-bottom: -30px;
+	#divflex{
+		width: $max;
+		margin: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding-top: 10px;
+		div{
+			width: 38%;
+			text-align: center;
+			height: auto;
+			img{
+				max-width: 90%;
+				height: auto;
+			}
+		}
+		div:nth-child(odd){
+			img{
+				padding-top: 85px;
+			}
+		}
+	}
+}
+
+
+
+/*--words  ---------------------------------*/
+#words{
+	background: url(../images/fondowordstop.png);
+	background-repeat: no-repeat;
+    background-size: contain;
+	margin-top: -1px;
+	#wordsfondo2{
+		background: url(../images/fondowordsbottom.png);
+		background-repeat: no-repeat;
+	    background-size: contain;
+	    background-position: center bottom;
+	    padding: 70px 30px 100px 30px;
+		div{
+			width: $max;
+			margin: auto;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+
+
+/*--func ---------------------------------*/
+#func{
+	#contenedor{
+		width: $max;
+		margin: auto;
+		padding-top: 35px;
+		h2{
+			color: $bordo;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+		h4{
+			text-align: center;
+			margin-bottom: 25px;
+		}
+		#modbase{
+			margin-bottom: 70px;
+			div{
+				border: 2px solid $bordo;
+				border-radius: 10px;
+				padding: 50px;
+				ul{
+					display: inline-block;
+					width: 49%;
+					li{
+						@include textclass(14px, 400, 28px, $gris1);
+						span{
+							color: $bordo;
+							padding-right: 10px;
+						}
+					}
+				}
+			}
+		}
+		#modcompl{
+			#divflex2{
+				display: flex;
+				justify-content: space-between;
+				margin: auto;
+				flex-wrap: wrap;
+				article{
+					width: 48%;
+					display: inline-block;
+					margin-bottom: 50px;
+					div{
+						display: inline-block;
+						width: 23%;
+						height: auto;
+						img{
+							max-width: 100%;
+							height: auto;
+						}
+					}
+					div:last-child{
+						width: 73%;
+						padding-left: 1%;
+						span{
+							@include textclass(15px, 400, 15px, black);
+						}
+						p{
+							@include textclass(12px, 400, 18px, $gris1);
+						}
+					}
+				}
+			}
+		}
+		#video{
+		    text-align: center;
+		    padding: 35px 0 70px 0;
+		}
+	}
+}
+
+
+
+
+/*--form ---------------------------------*/
+#form{
+	background: $gris3;
+	#formcontenedor{
+		width: $max;
+		margin: auto;
+		text-align: center;
+		padding-top: 35px;
+		h2{
+			color: $azul;
+			margin-bottom: 50px;
+		}
+		div{
+			width: 500px;
+			margin: auto;
+			input, textarea{
+				display: inline-block;
+				width: 100%;
+				margin-bottom: 15px;
+				padding: 15px;
+				box-sizing: border-box;
+				border-radius: 10px;
+				border: none;
+				@include textclass(13px, 400, 15px, $gris1);
+				font-family: $font;
+			}
+			textarea{
+				margin-bottom: 50px;
+			}
+			input[type=submit]{
+				display: inline-block;
+				width: auto;
+				@include botones($white, $azul);
+				margin-bottom: 90px;
+			}
+			input[type=number]::-webkit-inner-spin-button, 
+			input[type=number]::-webkit-outer-spin-button { 
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				margin: 0; 
+			}
+			//::-webkit-input-placeholder { font-family: $font; }
+		}
+	}
+}
+
+
+
+
+/*--nosotros  ---------------------------------*/
+#nos{
+	background: url(../images/nos1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;	
+	height: 360px;
+	div{
+		text-align: center;
+		padding-top: 7%;
+		width: 45%;
+		margin: auto;
+		h2{
+			color: $white;
+			margin-bottom: 40px;
+			line-height: 55px;
+		}
+		a{
+			@include botones($azul, $white);
+			margin-bottom: 20px;
+		}
+	}
+}
 
 
 

@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>SGL-WMS | Sistema logístico</title>
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
 	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -21,11 +23,11 @@
 						<a href="#caract">Características</a>
 					</li>
 					<li>
-						<a href="#capt">Capturas</a>
+						<a href="#divflex">Capturas</a>
 					</li>
 				</ul>
 				<div>
-					<a href="#">
+					<a href="http://sistema-logistico.com/" target="_blank">
 						<img src="images/logo.png">
 					</a>
 				</div>
@@ -76,8 +78,8 @@
 
 			<!-- SIDER BAR BUTTONS ////////////////-->
 			<div id="sidebar">
-				<a href="#form"><i class="fa fa-envelope" aria-hidden="true"></i></i>Contactar</a>
-				<a href="pdf/wms.pdf" download="wms_folleto"><i class="fa fa-download" aria-hidden="true"></i>Descargar PDF</a>
+				<a href="#form"><i class="fa fa-envelope" aria-hidden="true"></i></i></a>
+				<a href="pdf/wms.pdf" download="wms_folleto"><i class="fa fa-download" aria-hidden="true"></i></a>
 			</div>
 
 			<!-- UP BUTTON ///////////////////////-->
@@ -96,28 +98,28 @@
 				<h2>SGL - WMS</h2>
 				<article>
 					<div>
-						<img src="images/sist1.jpg">
+						<img src="images/sist1.png">
 					</div>
 					<h4>Best Practices</h4>
 					<p>Tiene incorporadas las “Best Practices” operativas por lo que ayuda a ordenar los procesos, reducir las mermas, incrementar la productividad, y mejorar la calidad del servicio a los clientes.</p>
 				</article>
 				<article>
 					<div>
-						<img src="images/sist2.jpg">
+						<img src="images/sist2.png">
 					</div>
 					<h4>Capacitación</h4>
 					<p>Es de muy fácil aprendizaje por los operarios al tener un diseño amigable al usuario, un entorno gráfico intuitivo y manuales de ayuda on-line de rápido acceso para cada función. </p>
 				</article>
 				<article>
 					<div>
-						<img src="images/sist3.jpg">
+						<img src="images/sist3.png">
 					</div>
 					<h4>Alcance</h4>
 					<p>Tiene una funcionalidad completa que puede soportar las necesidades de cada centro de distribución mediante la parametrización. Se integra facilmente con el sistema central del cliente.</p>
 				</article>
 				<article>
 					<div>
-						<img src="images/sist4.jpg">
+						<img src="images/sist4.png">
 					</div>
 					<h4>Modulación</h4>
 					<p>El sistema es escalable, y se puede partir de un módulo base con la funcionalidad operativa necesaria y agregar posteriormente los módulos complementarios.</p>
@@ -180,7 +182,7 @@
 				</article>
 			</div>
 
-			<a href="#">Descargar PDF</a>
+			<a href="pdf/wms.pdf" download="wms_folleto">Descargar PDF</a>
 	</section>
 
 
@@ -205,8 +207,10 @@
 
 	<!-- Words //////////////////////////////////////////////////// -->
 	<section id="words">
-		<div>
-			<img src="images/frases.png">
+		<div id="wordsfondo2">
+			<div>
+				<img src="images/frases.png">
+			</div>
 		</div>
 	</section>
 
@@ -349,9 +353,9 @@
 			</div>
 
 			<div id="video">
-				<h4>Video</h4>
-				<div>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/eMhVvYYTuQw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+				<h2>Video</h2>
+				<div id="divvideo">
+					<iframe width="640" height="360" src="https://www.youtube.com/embed/eMhVvYYTuQw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>	
 		</div>
@@ -365,16 +369,17 @@
 			<div>
 				<form action="enviar.php" method="post" enctype="text/plain">
 					
-					<input type="hidden" name="subject" value="consulta">
-					<input type="hidden" name="recipient" value="grilosada@gmail.com">
-					<input type="hidden" name="redirect" value="index.html">
+					<input type="hidden" name="subject" value="Consulta online SGL-WMS">
+					<input type="hidden" name='recipient' value="grilosada@gmail.com">
+					<input type="hidden" name="redirect" value="gracias.html/#form">
 
-
-					<input type="text" name="firstname" placeholder="Nombre*" required>
-					<input type="email" name="email" placeholder="Email*" required>
-					<input type="number" name="phone" placeholder="Teléfono">
-					<input type="number" name="company" placeholder="Empresa/Rubro*">
-					<textarea name="message" placeholder="Consulta" required></textarea>
+					<input type="text" name="nombre" placeholder="Nombre*">
+					<input type="email" name="email" placeholder="Email*">
+					<!--<input type="number" name="phone" placeholder="Teléfono" required>
+					<input type="text" name="company" placeholder="Empresa*" required>
+					<input type="text" name="web" placeholder="Página web*" required>
+-->
+					<textarea name="message" placeholder="Consulta"></textarea>
 					<input type="submit" value="Enviar consulta">
 				</form>
 			</div>
@@ -385,8 +390,8 @@
 	<!-- NOSOTROS //////////////////////////////////////////////////// -->
 	<section id="nos">
 		<div>
-			<h2>Conocé más sobre nuestros otros servicios</h2>
-			<a href="#">Ver servicios</a>
+			<h2>Conocé más sobre nuestros otros productos</h2>
+			<a href="http://sistema-logistico.com/" target="_blank">Ver productos</a>
 		</div>
 	</section>
 
@@ -396,22 +401,23 @@
 		<div id="foot1">
 			<nav>
 				<div>
-					<a href="#"><img src="images/logo2.png"></a>
+					<a href="http://sistema-logistico.com/" target="_blank"><img src="images/logo2.png"></a>
 				</div>
 				<ul id="datos">
 					<li class="ion-location"><a target="_blank" href="https://goo.gl/maps/txHkMueUirw">Av. Córdoba 5869, C.A.B.A.</a></li>
-					<li class="ion-ios-telephone"><a href="#">(+54 11) 3221-2595 Lineas Rotativas</a></li>
-					<li class="ion-email"><a href="#">info@sistema-logistico.com</a></li>
+					<li class="ion-ios-telephone"><a href="#">(+54 11) 3221-2595</a></li>
+					<li class="ion-ios-world"><a href="http://www.sistema-logistico.com/" target="_blank">www.sistema-logistico.com</a></li>
+					<li class="ion-email"><a href="mailto:info@sglwms.com">info@sglwms.com</a></li>
 				</ul>
 				<ul id="redes">
-					<li><a target="_blank" class="ion-social-facebook" href="https://www.facebook.com/Tecnologistica-Consultores-Jose-Luis-Losada-405419465545/"></a></li>
-					<li><a target="_blank" class="ion-social-twitter" href="https://twitter.com/tlconsultores"></a></li>
+					<li><a target="_blank" class="ion-social-facebook" href="https://www.facebook.com/SGL-WMS-454061128013119/?ref=bookmarks"></a></li>
+					<li><a target="_blank" class="ion-social-twitter" href="https://twitter.com/SGL_WMS"></a></li>
 					<li><a target="_blank" class="ion-social-linkedin" href="https://www.linkedin.com/company/11378388/"></a></li>
 				</ul>
 			</nav>
 		</div>
 		<div id="foot2">
-			<p>Copyright © 2017 Tecnologística Consultores S.A. |  Todos los derechos reservados  |  Powered by <a target="_blank" href="https://www.facebo ok.com/Dise%C3%B1o-Glosa-698997136956776/?ref=bookmarks">Diseño Glosa</a></p>
+			<p>Copyright © 2018 TLC INNOVATION S.A. |  Todos los derechos reservados  |  Powered by <a target="_blank" href="https://www.facebook.com/Dise%C3%B1o-Glosa-698997136956776/?ref=bookmarks">Diseño Glosa</a></p>
 		</div>
 	</footer>
 
